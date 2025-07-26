@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Kachusha';
+    src: url('/assets/fonts/Kachusha.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url('/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+  }
+  
+  :root {
+    --white: #fffefe;
+    --red: #db4430;
+    --blue: #2b5192;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--white);
+    color: #000;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .hero {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-title {
+    font-family: 'Kachusha', sans-serif;
+    font-size: 5rem;
+  }
+  
+  .hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .bear-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    opacity: 0.15;
+    z-index: 0;
+  }
+  
+  .noticias {
+    padding: 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  .noticias h2 {
+    font-family: 'Kachusha', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 300px;
+    font-size: 0.9rem;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card p {
+    padding: 1rem;
+  }
+  
+  .about {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 3rem 2rem;
+  }
+  
+  .about h2 {
+    font-family: 'Kachusha', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
