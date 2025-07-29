@@ -78,12 +78,16 @@
   
   .hero-title {
     font-family: 'Kachusha', sans-serif;
-    font-size: 5rem;
+    font-size: 7rem;
+  }
+
+  .hero-title-country {    
+    font-size: 4rem;
   }
   
   .hero-subtitle {
     margin-top: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   
   .bear-bg {
