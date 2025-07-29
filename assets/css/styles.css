@@ -1,221 +1,293 @@
+/* Fonts */
 @font-face {
-    font-family: 'Kachusha';
-    src: url('/assets/fonts/Kachusha.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'Ubuntu';
-    src: url('/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
-  }
-  
-  :root {
-    --white: #fffefe;
-    --red: #db4430;
-    --blue: #2b5192;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: var(--blue);
-    color: #000;
-  }
-  
-  
-  .header {
-    display: flex;
-    background: transparent;
-    justify-content: center;    
-    align-items: center;    
-    padding: 1rem 2rem;    
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
- 
- 
-.navbar {
-  display: flex;  
-  background-color: var(--white);
-  gap: 1.5rem;
-  padding: 1rem 2rem; 
-  border-radius: 2rem; /* round the edges */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  max-width: 90%;
-  align-items: center;
+  font-family: 'Kachusha';
+  src: url('/assets/fonts/Kachusha.ttf') format('truetype');
 }
 
-/* Navbar links */
-.navbar a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+
+/* Root Variables */
+:root {
+  --white: #fffefe;
+  --red: #db4430;
+  --blue: #2b5192;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Ubuntu', sans-serif;
+  background-color: var(--blue);
+  color: #000;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+  align-items: center;    
+  padding: 1rem 2rem;    
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* NAVBAR */
+.logo img {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  max-width: 90%;
+  border-radius: 2rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links,
+.nav-links-mobile {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a,
+.nav-links-mobile a {
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
   transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: var(--red); /* Optional hover effect */
+.navbar a:hover,
+.nav-links-mobile a:hover {
+  color: var(--red);
 }
-  
-  .hero {
-    background-color: var(--blue);
-    color: var(--white);
-    text-align: center;
-    padding: 4rem 2rem;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero-title {
-    font-family: 'Kachusha', sans-serif;
-    font-size: 7rem;
-  }
 
-  .hero-title-country {    
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile Nav */
+.nav-links-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 40%;
+  margin: 0.1rem auto 0;
+  text-align: center;
+}
+
+.nav-links-mobile.show {
+  display: flex;
+}
+
+/* HERO */
+.hero {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-family: 'Kachusha', sans-serif;
+  font-size: 7rem;
+}
+
+.hero-title-country {
+  font-size: 4rem;
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.bear-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* NOTICIAS */
+.noticias {
+  padding: 2rem;
+  background-color: var(--white);
+}
+
+.noticias h2 {
+  font-family: 'Kachusha', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card p {
+  padding: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.card a:hover {
+  color: var(--red);
+}
+
+.card a:hover img {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  padding: 5px;
+}
+
+/* ABOUT */
+.about {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 3rem 2rem;
+}
+
+.about h2 {
+  font-family: 'Kachusha', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* DOING */
+.doing {
+  padding: 2rem;
+  background-color: var(--white);
+}
+
+.doing h2 {
+  display: flex;
+  justify-content: center;
+  color: var(--blue);
+  font-family: 'Kachusha', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* CONTACTO */
+.contacto {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 3rem 2rem;
+}
+
+.contacto h2 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Kachusha', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-icons a img {
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 798px) {
+  .hero-title {
     font-size: 4rem;
   }
-  
+
+  .hero-title-country {
+    font-size: 2rem;
+  }
+
   .hero-subtitle {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-  
-  .bear-bg {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    max-height: 100%;
-    opacity: 0.15;
-    z-index: 0;
+
+  .navbar {
+    flex-direction: row;
   }
-  
-  .noticias {
-    padding: 2rem;
-    background-color: var(--white);
+
+  .menu-toggle {
+    display: flex;
   }
-  
-  .noticias h2 {
-    font-family: 'Kachusha', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+  .nav-links {
+    display: none;
   }
-  
+
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    max-width: 300px;
-    font-size: 0.9rem;
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card p {
-    padding: 1rem;
-  }
-  
-  .about {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 3rem 2rem;
-  }
-  
-  .about h2 {
-    font-family: 'Kachusha', sans-serif;    
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  .doing {
-    padding: 2rem;
-    background-color: var(--white);
-  }
-  
-  .doing h2 {
-    display: flex;
-    justify-content: center;
-    color: var(--blue);
-    font-family: 'Kachusha', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .contacto {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 3rem 2rem;
-  }
-
-  .contacto h2{
-    display: flex;
-    justify-content: center;
-    font-family: 'Kachusha', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;  
-  }
-
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .contact-icons a img {
-    width: 40px;
-    height: 40px;
-    background-color: var(--red); /* CICRAL red */
-    padding: 10px;
-    border-radius: 50%; /* circle shape */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .contact-icons a:hover img {
-    transform: scale(1.1);
-  }
-
-  
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 3rem;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .cards {
-      flex-direction: column;
-      align-items: center;
-    }    
-    
-  }
-  
+}
