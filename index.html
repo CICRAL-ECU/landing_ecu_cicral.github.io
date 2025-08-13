@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>CICRAL Ecuador</title>
+
    <!-- CSS -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -15,14 +17,27 @@
    <!-- Fav Icon -->
   <link rel="icon" href="assets/images/cropped-LOGO-CICRAL-32x32.png" type="image/png" /> 
   
-  <!-- Indexing in engines -->
-  <meta name="robots" content="noindex">
-
   <!-- SEO in engines -->
   <meta name="description" content="CICRAL Ecuador - Centro de integración y cooperación entre Rusia y América Latina">
   <meta name="keywords" content="CICRAL, Ecuador, Rusia, cooperación, integración, tecnología, educación">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cicral-ecu.com/">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="CICRAL Ecuador - Integración y Cooperación con Rusia">
+  <meta property="og:description" content="Fortalecemos los lazos tecnológicos, culturales y económicos entre Ecuador y Rusia.">
+  <meta property="og:image" content="https://cicral-ecu.com/images/Logo-CICRAL-Rojo-300x262.png">
+  <meta property="og:url" content="https://cicral-ecu.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CICRAL Ecuador - Integración y Cooperación con Rusia">
+<meta name="twitter:description" content="Fortalecemos los lazos tecnológicos, culturales y económicos entre Ecuador y Rusia.">
+<meta name="twitter:image" content="https://cicral-ecu.com/images/Logo-CICRAL-Rojo-300x262.png">
+
+  <!-- Google Verification -->
+<meta name="google-site-verification" content="W5ODBTV4lJIRpu59Zo_94byW8XbqBaYwKNcbOUanh1Y" />
 
 </head>
 
@@ -49,7 +64,9 @@
         </button>
 
         <div class="logo">
-          <img src="assets/images/ecuador.png" alt="Ecuador Flag" />       
+          <a href="https://www.cicral-ecu.com" aria-label="CICRAL Ecuador Website">
+          <img src="assets/images/ecuador.png" alt="Ecuador Flag" />
+        </a>       
         </div>
 
       </nav> 
@@ -72,23 +89,29 @@
 
 
   <section class="noticias" id="noticias">
-    <h2>Noticias:</h2>
+    <h2>Noticias:</h2>    
     <div class="cards">
       <div class="card">
+        <a href="https://www.instagram.com/p/DNOeHQ5xXSB/?hl=en&img_index=1" target="_blank">
+        <img src="assets/images/lanzamiento.jpg" alt="Noticia 1" />
+        <p><strong>Lanzamiento oficial de CICRAL Ecuador acompañado por la Embajadade Rusia</strong><br>06 agosto, 2025</p>
+        </a>  
+      </div>
+      <div class="card">
         <a href="https://www.instagram.com/p/DLIOD_Ax9_H/?img_index=1" target="_blank">
-        <img src="assets/images/Mayo-9.jpg" alt="Noticia 1" />
+        <img src="assets/images/Mayo-9.jpg" alt="Noticia 2" />
         <p><strong>CICRAL Ecuador presente en la celebración del Día de la victoria en Quito</strong><br>10 mayo, 2025</p>
         </a>  
       </div>
       <div class="card">
         <a href="https://www.instagram.com/p/DLF1nOPxnd7/?img_index=1" target="_blank">        
-        <img src="assets/images/enbajada_uio.jpg" alt="Noticia 2" />        
+        <img src="assets/images/enbajada_uio.jpg" alt="Noticia 3" />        
         <p><strong>CICRAL Ecuador y la Embajada de Rusia en Ecuador planifican un año de cooperación estratégica</strong><br>15 abril, 2025</p>
         </a>  
       </div>
       <div class="card">
         <a href="https://www.instagram.com/p/DLD2l6Kx-M9/" target="_blank">
-        <img src="assets/images/imbrics.jpg" alt="Noticia 3" />
+        <img src="assets/images/imbrics.jpg" alt="Noticia 4" />
         <p><strong>CICRAL Ecuador participante en evento de relaciones comerciales y económicas entre Rusia y América Latina.</strong><br>10 abril, 2025</p>
         </a>  
       </div>
@@ -112,7 +135,7 @@
         <p><strong>Foros económicos</strong><br>Conectamos gremios industriales ecuatorianos con actores rusos como universidades y empresas.</p>
       </div>
       <div class="card">       
-        <p><strong>Horizontes Económicos</strong><br>Preparamos eventos en Quito para fomentar la cooperación productiva con Rusia.</p>
+        <p><strong>Horizontes Económicos</strong><br>Preparamos eventos en Ecuador para fomentar la cooperación productiva con Rusia.</p>
       </div>
       <div class="card">        
         <p><strong>Educación</strong><br>Impulsamos becas para ecuatorianos en universidades rusas.</p>
@@ -141,32 +164,9 @@
     </div>
   </section>
 
-<!-- Js Scripts -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links-mobile');
-      if (toggleBtn && navLinks) {
-        toggleBtn.addEventListener('click', () => {
-          navLinks.classList.toggle('show');
-        });
-      }
-    });
-  </script>
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CICRAL Ecuador",
-    "url": "https://cicral-ecu.com",
-    "logo": "https://cicral-ecu.com/assets/images/Logo-CICRAL-Rojo-300x262.png",
-    "sameAs": [
-      "https://www.instagram.com/ecu.cicral/",
-      "https://www.linkedin.com/in/centro-de-integracion-y-cooperacion-de-rusia-y-am%C3%A9rica-latina-5931332a9"
-    ]
-  }
-  </script>
+  <!-- JS Scripts -->
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/schema.js"></script> 
 
 </body>
 </html>
